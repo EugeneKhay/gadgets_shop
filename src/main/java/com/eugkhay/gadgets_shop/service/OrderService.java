@@ -9,9 +9,9 @@ import java.util.List;
 
 public interface OrderService {
 
-    List<Product> getAllOrders();
-    Product getOrderById(@PathVariable String id);
-    Product createOrder(@RequestBody Order product);
-    Product updateOrder(@PathVariable("id") Order orderFromDB, @RequestBody Order order);
-    void deleteOrder(@PathVariable("id") Order order);
+    List<Order> getAllOrders();
+    Order getOrderById(String id);
+    Order createOrder(Order product);
+    Order updateOrder(Order orderFromDB, Order order);
+    void deleteOrder(Order order);
 }

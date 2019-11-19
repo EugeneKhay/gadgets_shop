@@ -9,8 +9,8 @@ import java.util.List;
 public interface ProductService {
 
     List<Product> getAllProducts();
-    Product getProductById(@PathVariable String id);
-    Product createProduct(@RequestBody Product product);
-    Product updateProduct(@PathVariable("id") Product productFromDB, @RequestBody Product product);
-    void deleteProduct(@PathVariable("id") Product product);
+    Product getProductById(String id);
+    Product createProduct(Product product);
+    Product updateProduct(Product productFromDB, Product product);
+    void deleteProduct(Product product);
 }

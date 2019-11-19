@@ -12,6 +12,10 @@ import org.springframework.data.mongodb.core.mapping.MongoMappingContext;
 @Configuration
 public class MongoConfig {
 
+    public String getMappingBasePackage() {
+        return "com.eugkhay.gadgets_shop.config.domain";
+    }
+
     @Bean
     public MongoTemplate mongoTemplate(MongoDbFactory mongoDbFactory, MongoMappingContext context) {
         MappingMongoConverter converter = new MappingMongoConverter(new DefaultDbRefResolver(mongoDbFactory), context);
