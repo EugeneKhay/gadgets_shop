@@ -11,7 +11,7 @@ import java.util.List;
 public interface ClientService extends UserDetailsService {
 
     List<Client> getAllClients();
-    Client getClientById(String id);
+    //Client getClientById(String id);
     Client createClient(Client client);
     Client updateClient(Client clientFromDB, Client client);
     void deleteClient(Client client);

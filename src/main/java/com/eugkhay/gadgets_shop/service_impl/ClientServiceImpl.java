@@ -25,10 +25,10 @@ public class ClientServiceImpl implements ClientService {
         return clientRepo.findAll();
     }
 
-    @Override
-    public Client getClientById(String id) {
-        return clientRepo.findBy_id(id);
-    }
+//    @Override
+//    public Client getClientById(String id) {
+//        return clientRepo.fi
+//    }
 
     @Override
     public Client createClient(Client client) {

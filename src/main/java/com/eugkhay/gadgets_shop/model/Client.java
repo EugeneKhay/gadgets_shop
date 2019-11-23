@@ -9,6 +9,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.Set;
 
@@ -21,7 +22,7 @@ import java.util.Set;
 public class Client implements UserDetails {
 
     @Id
-    public ObjectId _id;
+    private String id;
     private String firstName;
     private String lastName;
     private LocalDate birthDate;
@@ -31,6 +32,11 @@ public class Client implements UserDetails {
     private Set<ClientAddress> addressList;
     private Set<Order> orders;
     private Set<Role> roles;
+    private String name;
+    private String userpic;
+    private String gender;
+    private String locale;
+    private LocalDateTime lastVisit;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
